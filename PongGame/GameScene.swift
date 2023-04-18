@@ -21,6 +21,7 @@ class GameScene: SKScene {
        
         ball.physicsBody?.applyImpulse(CGVector(dx:20,dy:20))
         let edge = SKPhysicsBody(edgeLoopFrom: self.frame)
+        //var touchLocation = CGPoint?()
         
         edge.friction = 0
         edge.restitution = 1
@@ -29,8 +30,16 @@ class GameScene: SKScene {
         
     }
     
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch in touches{
+            let touchLocation = touch.location(in:self)
 
+            player.position.x = (touchLocation.x)
+        }
+    }
+    
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+        opponent.position.x = (ball.position.x)
     }
 }
