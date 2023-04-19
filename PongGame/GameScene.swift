@@ -31,6 +31,7 @@ class GameScene: SKScene {
         ball = self.childNode(withName: "ball") as! SKSpriteNode
        
         let edge = SKPhysicsBody(edgeLoopFrom: self.frame)
+        //var touchLocation = CGPoint?()
         
         edge.friction = 0
         edge.restitution = 1
@@ -98,6 +99,10 @@ class GameScene: SKScene {
     }
     
 
+            player.position.x = (touchLocation.x)
+        }
+    }
+    
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
         
