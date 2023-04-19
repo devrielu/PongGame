@@ -9,6 +9,8 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
+var currType = typeOfGame.normal
+
 class GameViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -19,6 +21,8 @@ class GameViewController: UIViewController {
             if let scene = SKScene(fileNamed: "GameScene") {
                 // Set the scale mode to scale to fit the window
                 scene.scaleMode = .aspectFill
+                //setting scene size to size of device
+                scene.size = view.bounds.size
                 
                 // Present the scene
                 view.presentScene(scene)
