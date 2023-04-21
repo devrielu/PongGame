@@ -18,6 +18,10 @@ class GameScene: SKScene {
     var topScore = SKLabelNode()
     var bottomScore = SKLabelNode()
     var background = SKSpriteNode()
+    
+    var popup = SKShapeNode()
+    var toMenu = SKLabelNode()
+    var playAgain = SKLabelNode()
         
     override func didMove(to view: SKView) {
         //Setting up background to size of screen being played on
@@ -27,6 +31,10 @@ class GameScene: SKScene {
         //Setting each score label
         topScore = self.childNode(withName: "topLabel") as! SKLabelNode
         bottomScore = self.childNode(withName: "bottomLabel") as! SKLabelNode
+        popup = self.childNode(withName: "GameOverPopup") as! SKShapeNode
+        //toMenu = popup.childNode(withName: "toMenu") as! SKLabelNode
+        playAgain = popup.childNode(withName: "playAgain") as! SKLabelNode
+        
         player = self.childNode(withName: "main") as! SKSpriteNode
         //setting player position with respect to the screen size
         player.position.y = (-self.frame.height / 2) + 50
@@ -50,13 +58,19 @@ class GameScene: SKScene {
     }
     
     func start() {
-        //Zeroing out score of new game, setting score to the designated labels
-        gameScore = [0,0]
-        topScore.text = "\(gameScore[1])"
-        bottomScore.text = "\(gameScore[0])"
-        //Applying initial force to ball to start game
-        ball.physicsBody?.applyImpulse(CGVector(dx:18,dy:18))
-    }
+            gameScore = [0, 0]
+            topScore.text = "\(gameScore[1])"
+            bottomScore.text = "\(gameScore[0])"
+            ball.physicsBody?.applyImpulse(CGVector(dx: 18, dy: 18))
+            popup.isHidden = true
+            
+            // Unhide ball, player, opponent, and top and bottom scores
+            ball.isHidden = false
+            player.isHidden = false
+            opponent.isHidden = false
+            topScore.isHidden = false
+            bottomScore.isHidden = false
+        }
     
     func scorePoint(scoringPlayer : SKSpriteNode){
         //Called when point is scored, resetting ball
@@ -76,6 +90,15 @@ class GameScene: SKScene {
         //Set the labels to match the score of the game
         topScore.text = "\(gameScore[1])"
         bottomScore.text = "\(gameScore[0])"
+        
+        if(gameScore[1] == 8 || gameScore[0] == 8){ //player wins
+                   popup.isHidden = false
+                   topScore.isHidden = true
+                   bottomScore.isHidden = true
+                   ball.position = CGPoint(x: 0, y: 0)
+                   ball.isHidden = true
+                   ball.physicsBody?.velocity = CGVector(dx:0,dy:0);
+               }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -83,7 +106,14 @@ class GameScene: SKScene {
         for touch in touches {
             let location = touch.location(in: self)
             //If the game is in 2 player mode, tracking for both top and bottom players
-            if currType == .player2 {
+            if(popup.isHidden == false){
+                            let subLoc = touch.location(in: popup)
+                            if playAgain.contains(subLoc) {
+                                start()
+                            } else if toMenu.contains(subLoc){
+                                
+                            }
+                } else if currType == .player2 {
                 if location.y > 0 {
                     opponent.run(SKAction.moveTo(x: location.x, duration: 0.1))
                 }
