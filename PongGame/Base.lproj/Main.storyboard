@@ -32,40 +32,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCi-j2-l76">
-                                <rect key="frame" x="155" y="498.33333333333326" width="84" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Difficult"/>
+                                <rect key="frame" x="155.66666666666666" y="597.66666666666663" width="83.333333333333343" height="34.333333333333371"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Difficult">
+                                    <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="difficult:" destination="yPG-BP-gFE" eventType="touchUpInside" id="WVa-BT-PDV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pjg-QR-K6A">
-                                <rect key="frame" x="154" y="219" width="85" height="35"/>
+                                <rect key="frame" x="154" y="319" width="85" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Pjg-QR-K6A" secondAttribute="height" multiplier="17:7" id="Q6B-Vv-OnT"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="2 Player"/>
+                                <buttonConfiguration key="configuration" style="plain" title="2 Player">
+                                    <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="player2:" destination="yPG-BP-gFE" eventType="touchUpInside" id="iHh-7T-YTi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgS-fd-zDn">
-                                <rect key="frame" x="166" y="363" width="60" height="34.333333333333314"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Easy"/>
+                                <rect key="frame" x="166.33333333333334" y="463" width="59.666666666666657" height="34.333333333333314"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Easy">
+                                    <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="easy:" destination="yPG-BP-gFE" eventType="touchUpInside" id="ELS-bl-He9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52w-8A-LxB">
-                                <rect key="frame" x="157" y="426.33333333333331" width="80" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Normal"/>
+                                <rect key="frame" x="157.66666666666666" y="526.33333333333337" width="79.333333333333343" height="34.333333333333371"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Normal">
+                                    <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="normal:" destination="yPG-BP-gFE" eventType="touchUpInside" id="Yjg-bV-Hfu"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soccer Pong" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCE-pl-vfY">
+                                <rect key="frame" x="89.666666666666686" y="171" width="214" height="62"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="54g-EJ-LlY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -78,11 +88,13 @@
                             <constraint firstItem="IgS-fd-zDn" firstAttribute="centerX" secondItem="soO-uf-BTN" secondAttribute="centerX" id="SNT-EL-CF9"/>
                             <constraint firstItem="Pjg-QR-K6A" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="54g-EJ-LlY" secondAttribute="leading" id="USG-a2-VLi" userLabel="Port- 2player leading"/>
                             <constraint firstItem="IgS-fd-zDn" firstAttribute="top" secondItem="Pjg-QR-K6A" secondAttribute="bottom" constant="20" id="Xwf-h0-Y93"/>
-                            <constraint firstItem="Pjg-QR-K6A" firstAttribute="top" secondItem="54g-EJ-LlY" secondAttribute="top" constant="160" id="aOX-9W-mz5" userLabel="Port- 2player top"/>
+                            <constraint firstItem="hCE-pl-vfY" firstAttribute="centerX" secondItem="soO-uf-BTN" secondAttribute="centerX" id="ZQv-uZ-cXg"/>
+                            <constraint firstItem="Pjg-QR-K6A" firstAttribute="top" secondItem="54g-EJ-LlY" secondAttribute="top" constant="260" id="aOX-9W-mz5" userLabel="Port- 2player top"/>
                             <constraint firstItem="52w-8A-LxB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="54g-EJ-LlY" secondAttribute="leading" id="csw-KD-2tQ" userLabel="Port- normal leading"/>
                             <constraint firstItem="jCi-j2-l76" firstAttribute="top" secondItem="52w-8A-LxB" secondAttribute="bottom" constant="18" id="h0s-A9-Ae1"/>
                             <constraint firstItem="52w-8A-LxB" firstAttribute="centerX" secondItem="soO-uf-BTN" secondAttribute="centerX" id="jxs-4K-yMC"/>
                             <constraint firstItem="IgS-fd-zDn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="54g-EJ-LlY" secondAttribute="leading" id="kDP-tg-nBb" userLabel="Port- easy leading"/>
+                            <constraint firstItem="hCE-pl-vfY" firstAttribute="top" secondItem="54g-EJ-LlY" secondAttribute="top" constant="112" id="kYY-Fr-fAh"/>
                             <constraint firstItem="jCi-j2-l76" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="54g-EJ-LlY" secondAttribute="leading" id="mgC-2P-E6v" userLabel="Port- difficult leading"/>
                             <constraint firstItem="54g-EJ-LlY" firstAttribute="trailing" secondItem="jCi-j2-l76" secondAttribute="trailing" constant="154" id="nSB-Lf-VWg" userLabel="Port- difficult trailing"/>
                             <constraint firstItem="IgS-fd-zDn" firstAttribute="top" secondItem="Pjg-QR-K6A" secondAttribute="bottom" constant="109" id="ngw-KN-SH0" userLabel="Port- easy leading"/>
@@ -172,6 +184,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
