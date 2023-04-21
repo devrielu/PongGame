@@ -31,51 +31,127 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgS-fd-zDn">
-                                <rect key="frame" x="166" y="363" width="60" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Easy"/>
-                                <connections>
-                                    <action selector="easy:" destination="yPG-BP-gFE" eventType="touchUpInside" id="ELS-bl-He9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52w-8A-LxB">
-                                <rect key="frame" x="157" y="427" width="80" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Normal"/>
-                                <connections>
-                                    <action selector="normal:" destination="yPG-BP-gFE" eventType="touchUpInside" id="Yjg-bV-Hfu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCi-j2-l76">
-                                <rect key="frame" x="155" y="499" width="84" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCi-j2-l76">
+                                <rect key="frame" x="155" y="498.33333333333326" width="84" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Difficult"/>
                                 <connections>
                                     <action selector="difficult:" destination="yPG-BP-gFE" eventType="touchUpInside" id="WVa-BT-PDV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pjg-QR-K6A">
-                                <rect key="frame" x="154" y="216" width="85" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pjg-QR-K6A">
+                                <rect key="frame" x="154" y="219" width="85" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Pjg-QR-K6A" secondAttribute="height" multiplier="17:7" id="Q6B-Vv-OnT"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="2 Player"/>
                                 <connections>
                                     <action selector="player2:" destination="yPG-BP-gFE" eventType="touchUpInside" id="iHh-7T-YTi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgS-fd-zDn">
+                                <rect key="frame" x="166" y="363" width="60" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Easy"/>
+                                <connections>
+                                    <action selector="easy:" destination="yPG-BP-gFE" eventType="touchUpInside" id="ELS-bl-He9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52w-8A-LxB">
+                                <rect key="frame" x="157" y="426.33333333333331" width="80" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Normal"/>
+                                <connections>
+                                    <action selector="normal:" destination="yPG-BP-gFE" eventType="touchUpInside" id="Yjg-bV-Hfu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="54g-EJ-LlY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jCi-j2-l76" firstAttribute="centerX" secondItem="soO-uf-BTN" secondAttribute="centerX" id="4IH-hj-hlz"/>
+                            <constraint firstItem="IgS-fd-zDn" firstAttribute="leading" secondItem="54g-EJ-LlY" secondAttribute="leading" constant="396" id="67X-hR-NuS"/>
+                            <constraint firstItem="Pjg-QR-K6A" firstAttribute="centerX" secondItem="soO-uf-BTN" secondAttribute="centerX" id="CP5-29-VbV"/>
+                            <constraint firstItem="Pjg-QR-K6A" firstAttribute="top" secondItem="54g-EJ-LlY" secondAttribute="top" constant="20" id="FEi-ls-Lb5"/>
+                            <constraint firstItem="jCi-j2-l76" firstAttribute="top" secondItem="52w-8A-LxB" secondAttribute="bottom" constant="37" id="JbQ-dj-ha2" userLabel="Port- difficult top"/>
+                            <constraint firstItem="IgS-fd-zDn" firstAttribute="centerX" secondItem="soO-uf-BTN" secondAttribute="centerX" id="SNT-EL-CF9"/>
+                            <constraint firstItem="Pjg-QR-K6A" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="54g-EJ-LlY" secondAttribute="leading" id="USG-a2-VLi" userLabel="Port- 2player leading"/>
+                            <constraint firstItem="IgS-fd-zDn" firstAttribute="top" secondItem="Pjg-QR-K6A" secondAttribute="bottom" constant="20" id="Xwf-h0-Y93"/>
+                            <constraint firstItem="Pjg-QR-K6A" firstAttribute="top" secondItem="54g-EJ-LlY" secondAttribute="top" constant="160" id="aOX-9W-mz5" userLabel="Port- 2player top"/>
+                            <constraint firstItem="52w-8A-LxB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="54g-EJ-LlY" secondAttribute="leading" id="csw-KD-2tQ" userLabel="Port- normal leading"/>
+                            <constraint firstItem="jCi-j2-l76" firstAttribute="top" secondItem="52w-8A-LxB" secondAttribute="bottom" constant="18" id="h0s-A9-Ae1"/>
+                            <constraint firstItem="52w-8A-LxB" firstAttribute="centerX" secondItem="soO-uf-BTN" secondAttribute="centerX" id="jxs-4K-yMC"/>
+                            <constraint firstItem="IgS-fd-zDn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="54g-EJ-LlY" secondAttribute="leading" id="kDP-tg-nBb" userLabel="Port- easy leading"/>
+                            <constraint firstItem="jCi-j2-l76" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="54g-EJ-LlY" secondAttribute="leading" id="mgC-2P-E6v" userLabel="Port- difficult leading"/>
+                            <constraint firstItem="54g-EJ-LlY" firstAttribute="trailing" secondItem="jCi-j2-l76" secondAttribute="trailing" constant="154" id="nSB-Lf-VWg" userLabel="Port- difficult trailing"/>
+                            <constraint firstItem="IgS-fd-zDn" firstAttribute="top" secondItem="Pjg-QR-K6A" secondAttribute="bottom" constant="109" id="ngw-KN-SH0" userLabel="Port- easy leading"/>
+                            <constraint firstItem="54g-EJ-LlY" firstAttribute="trailing" secondItem="Pjg-QR-K6A" secondAttribute="trailing" constant="154" id="qdX-5h-yua" userLabel="Port-2player trailing"/>
+                            <constraint firstItem="52w-8A-LxB" firstAttribute="top" secondItem="IgS-fd-zDn" secondAttribute="bottom" constant="29" id="tio-oZ-QAj" userLabel="Port- normal top"/>
+                            <constraint firstItem="54g-EJ-LlY" firstAttribute="trailing" secondItem="IgS-fd-zDn" secondAttribute="trailing" constant="167" id="uO6-bx-Rie" userLabel="Port- easy trailing"/>
+                            <constraint firstItem="54g-EJ-LlY" firstAttribute="trailing" secondItem="52w-8A-LxB" secondAttribute="trailing" constant="156" id="uoR-mm-HDb" userLabel="Port- normal trailing"/>
+                            <constraint firstItem="54g-EJ-LlY" firstAttribute="bottom" secondItem="jCi-j2-l76" secondAttribute="bottom" constant="84" id="xTV-8D-moe"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="nSB-Lf-VWg"/>
+                                <exclude reference="qdX-5h-yua"/>
+                                <exclude reference="uO6-bx-Rie"/>
+                                <exclude reference="uoR-mm-HDb"/>
+                                <exclude reference="xTV-8D-moe"/>
+                                <exclude reference="CP5-29-VbV"/>
+                                <exclude reference="FEi-ls-Lb5"/>
+                                <exclude reference="USG-a2-VLi"/>
+                                <exclude reference="aOX-9W-mz5"/>
+                                <exclude reference="67X-hR-NuS"/>
+                                <exclude reference="SNT-EL-CF9"/>
+                                <exclude reference="Xwf-h0-Y93"/>
+                                <exclude reference="kDP-tg-nBb"/>
+                                <exclude reference="ngw-KN-SH0"/>
+                                <exclude reference="csw-KD-2tQ"/>
+                                <exclude reference="jxs-4K-yMC"/>
+                                <exclude reference="tio-oZ-QAj"/>
+                                <exclude reference="4IH-hj-hlz"/>
+                                <exclude reference="JbQ-dj-ha2"/>
+                                <exclude reference="h0s-A9-Ae1"/>
+                                <exclude reference="mgC-2P-E6v"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="xTV-8D-moe"/>
+                                <include reference="CP5-29-VbV"/>
+                                <include reference="FEi-ls-Lb5"/>
+                                <include reference="67X-hR-NuS"/>
+                                <include reference="SNT-EL-CF9"/>
+                                <include reference="Xwf-h0-Y93"/>
+                                <include reference="jxs-4K-yMC"/>
+                                <include reference="4IH-hj-hlz"/>
+                                <include reference="h0s-A9-Ae1"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="nSB-Lf-VWg"/>
+                                <include reference="qdX-5h-yua"/>
+                                <include reference="uO6-bx-Rie"/>
+                                <include reference="uoR-mm-HDb"/>
+                                <include reference="USG-a2-VLi"/>
+                                <include reference="aOX-9W-mz5"/>
+                                <include reference="kDP-tg-nBb"/>
+                                <include reference="ngw-KN-SH0"/>
+                                <include reference="csw-KD-2tQ"/>
+                                <include reference="tio-oZ-QAj"/>
+                                <include reference="JbQ-dj-ha2"/>
+                                <include reference="mgC-2P-E6v"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="emm-EP-agR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTx-77-nUc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-640.4580152671756" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="-640.84507042253529" y="2.2900763358778624"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
