@@ -17,8 +17,13 @@ class GameScene: SKScene {
     var gameScore = [Int]()
     var topScore = SKLabelNode()
     var bottomScore = SKLabelNode()
-    
+    var background = SKSpriteNode()
+        
     override func didMove(to view: SKView) {
+        
+        background = self.childNode(withName: "background") as! SKSpriteNode
+        background.size.height = self.frame.height
+        background.size.width = self.frame.width
         
         topScore = self.childNode(withName: "topLabel") as! SKLabelNode
         bottomScore = self.childNode(withName: "bottomLabel") as! SKLabelNode
@@ -39,6 +44,7 @@ class GameScene: SKScene {
         self.physicsBody = edge
         //Start game
         start()
+        
         
     }
     
@@ -99,9 +105,9 @@ class GameScene: SKScene {
     }
     
 
-            player.position.x = (touchLocation.x)
-        }
-    }
+//            player.position.x = (touchLocation.x)
+  //      }
+    //}
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
@@ -122,10 +128,10 @@ class GameScene: SKScene {
         
         }
         
-        if ball.position.y <= player.position.y - 35 {
+        if ball.position.y <= player.position.y - 30 {
             scorePoint(scoringPlayer: opponent)
         }
-        else if ball.position.y >= opponent.position.y + 35 {
+        else if ball.position.y >= opponent.position.y + 30 {
             scorePoint(scoringPlayer: player)
         }
     }
